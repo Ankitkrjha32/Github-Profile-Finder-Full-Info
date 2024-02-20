@@ -6,8 +6,16 @@ import { useEffect } from 'react';
 
 const Inputsearch = ({ tag, changeHandler, clickHandler1 }) => {
 
+// Function to control enter event on input tag
+
+function enterHandler(e){
+if(e.key==='Enter'){
+  e.preventDefault()
+  clickHandler1()
+}
 
 
+}
 
   {/* <Cardprofile clickHandler1={clickHandler1}/> */ }
 
@@ -19,15 +27,15 @@ const Inputsearch = ({ tag, changeHandler, clickHandler1 }) => {
     <div className='mt-6  '>
 
 
-      <div className=' flex w-full   justify-between items-center h-[80px] bg-[#fefefe] rounded-xl inputcontainer '>
+      <div className=' flex w-full   justify-between items-center h-[80px] bg-[#fefefe]  rounded-2xl '>
         <div className='flex  w-full items-center px-3'>
 
-          <TfiSearch className='w-[30px] h-[25px]  ' />
+          <TfiSearch className='w-[30px] h-[25px] text-blue-500 ' />
 
 
           <div className='  w-9/12 '>
             <label>
-              <input type="text" name="" onChange={changeHandler} value={tag} placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe] text-[#627AA1] w-full   font-mono text-xl' />
+              <input type="text" onKeyDown={enterHandler} onChange={changeHandler} value={tag} placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe]  text-[#627AA1] w-full   font-mono text-xl' />
             </label>
           </div>
         </div>

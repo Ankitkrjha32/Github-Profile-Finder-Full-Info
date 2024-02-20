@@ -4,8 +4,6 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { FaTwitter } from "react-icons/fa6";
-import axios from 'axios';
-import Inputsearch from './Inputsearch';
 import LoadingPage from './Loadingpage';
 // import tag from "../component/Inputsearch"
 
@@ -62,7 +60,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
             <div className='mt-6'>
               {
                 bio === null ? <p className='font-mono bio text-[#2b3442]'>BIO NOT AVAILABLE </p> :
-                  <span className='font-mono text-[#2b3442] bio'>
+                  <span className='font-mono text-[#2b3449]  bio'>
                     {bio} </span>
               }
             </div>
@@ -83,8 +81,8 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
 
             </div>
             {/* location  and links diiv niche banega  */}
-            <div className='flex border-2 mt-5 gap-5 pr-3 pt-4 pb-4 pl-8 flex-col'>
-              <div className='flex justify-between'>
+            <div className='flex border-2 mt-5 gap-5 pr-3 pt-4 pb-4 pl-8 flex-col '>
+              <div className='flex justify-between '>
                 {/* left side bala div */}
                 <div className='flex gap-2 items-center'>
                   {/* icon */}
@@ -97,7 +95,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                     {/* <p className='text-[#4b6ab5]'> {locate} </p> */}
 
                     {
-                      locate === null ? <p className='text-[#4b6ab5]'>NOT AVAILABLE</p> : (<p className='text-[#4b6ab5]'> {locate} </p>)
+                      locate === null ? <span className='text-[#4b6ab5]'>NOT AVAILABLE</span> : (<span className='text-[#4b6ab5]'> {locate} </span>)
                     }
 
 
@@ -113,7 +111,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                   </div>
                   <div>
                     {
-                      email === '' ? <p className='text-[#4b6ab5]'>NOT AVAILABLE</p> : (<p className='text-[#4b6ab5]'> {email} </p>)
+                      email === '' ? <span className='text-[#4b6ab5]'>NOT AVAILABLE</span> : (<span className='text-[#4b6ab5]'> {email} </span>)
                     }
                   </div>
                 </div>
@@ -132,7 +130,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                   </div>
                   <div>
                     {
-                      twitterLink === null ? <p className='text-[#4b6ab5]'>NOT AVAILABLE</p> : (<p className='text-[#4b6ab5]'> {twitterLink} </p>)
+                      twitterLink === null ? <span className='text-[#4b6ab5]'>NOT AVAILABLE</span> : (<span className='text-[#4b6ab5]'> {twitterLink} </span>)
                     }
                   </div>
                 </div>
@@ -147,7 +145,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                     {/* */}
                     {/* <p className='text-[#4b6ab5]'> {locate} </p> */}
                     {
-                      bussinessLink === null ? <p className='text-[#4b6ab5]'>NOT AVAILABLE</p> : (<p className='text-[#4b6ab5]'> {bussinessLink} </p>)
+                      bussinessLink === null ? <span className='text-[#4b6ab5]'>NOT AVAILABLE</span> : (<span className='text-[#4b6ab5]'> {bussinessLink} </span>)
                     }
                   </div>
                 </div>
