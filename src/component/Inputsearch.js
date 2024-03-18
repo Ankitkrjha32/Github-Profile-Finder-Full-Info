@@ -4,7 +4,7 @@ import Cardprofile from './Cardprofile';
 import { useEffect } from 'react';
 // import fetchData from "../component/Cardprofile"
 
-const Inputsearch = ({ tag, changeHandler, clickHandler1 }) => {
+const Inputsearch = ({  changeHandler, clickHandler1 }) => {
 
 // Function to control enter event on input tag
 
@@ -35,7 +35,8 @@ if(e.key==='Enter'){
 
           <div className='  w-9/12 '>
             <label>
-              <input type="text" onKeyDown={enterHandler} onChange={changeHandler} value={tag} placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe]  text-[#627AA1] w-full   font-mono text-xl' />
+              <input type="text" onKeyDown={enterHandler} onChange={changeHandler} 
+                placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe]  text-[#627AA1] w-full   font-mono text-xl' />
             </label>
           </div>
         </div>

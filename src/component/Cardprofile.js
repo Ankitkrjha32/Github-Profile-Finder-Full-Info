@@ -27,18 +27,18 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
 
   return (
     <div className='mt-3'>
-      <div className='w-full border-2 rounded-2xl  container  bg-[#fefefe] '>
+      <div className=' border-2 rounded-2xl  container  bg-[#fefefe] '>
         {/* this div contain all profile section */}
 
         {
           loading?(<LoadingPage/>):(
         
-        <div className='border-2 justify-between h-full flex m-5 gap-4'>
+        <div className='border-2 justify-between h-full flex  m-2 lg:m-5 lg:gap-4 lg:flex-row '>
 
 
           {/* left side for image section */}
           <div className=' border-2 py-9 pl-3 pr-3  '>
-            <img src={img} className='rounded-[100%] w-[150px]  h-[110px] ' />
+            <img src={img} className='rounded-[100%] w-[60px] h-[60px] lg:w-[150px]  lg:h-[110px] ' />
 
 
           </div>
@@ -48,12 +48,12 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
           <div className='flex flex-col border-2 w-full py-9 '>
             {/* div for name and joined date */}
             <div className='flex items-center justify-between '>
-              <h3 className='text-[26px] font-bold  text-[#2b3442] name'>{name} </h3>
-              <p className='font-mono text-[#7f95b8]'> {joined} </p>
+              <h3 className=' text-[20px] lg:text-[26px] font-bold  text-[#2b3442] name'>{name} </h3>
+              <p className='font-mono text-[#7f95b8]  lg:visible'> {joined} </p>
             </div>
             {/* div for id section */}
             <div className=''>
-              <a href={url} target='blank' className='text-[#1c88ff] font-bold font-mono lowercase underline'> {id}</a>
+              <a href={url} target='blank' className='text-[#1c88ff] font-bold font-mono lowercase underline'>@{id}</a>
 
             </div>
             {/* div for bio section */}
@@ -65,7 +65,7 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
               }
             </div>
             {/* common div for  3 individeual section repo follower lilkes */}
-            <div className='flex  mt-8 py-6  bg-[#f6f8ff] rounded-2xl items-center justify-evenly'>
+            <div className='flex  mt-8 py-6  bg-[#f6f8ff] rounded-2xl items-center justify-evenly  lg:flex-row'>
               <div className='flex flex-col gap-1 items-center'>
                 <p className='text-sm'> Repos </p>
                 <p className='text-[#2b3444] text-2xl font-bold '>{repos}</p>
@@ -81,12 +81,12 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
 
             </div>
             {/* location  and links diiv niche banega  */}
-            <div className='flex border-2 mt-5 gap-5 pr-3 pt-4 pb-4 pl-8 flex-col '>
-              <div className='flex justify-between '>
+            <div className=' flex border-2 mt-5 gap-1 lg:gap-5  pt-4 lg:pb-4 lg:pl-8 pl-3 flex-col  text-[18px] lg:text-[15px]'>
+              <div className='flex lg:justify-between  gap-1 flex-col lg:flex-row '>
                 {/* left side bala div */}
-                <div className='flex gap-2 items-center'>
+                <div className='flex gap-4 lg:gap-2 items-center'>
                   {/* icon */}
-                  <div className='text-xl'>
+                  <div className='text-2xl lg:text-xl text-red-600'>
                     <FaMapMarkerAlt />
                   </div>
 
@@ -104,9 +104,9 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                 </div>
                 {/* right section ke lie */}
 
-                <div className='flex justify-center items-center gap-2'>
+                <div className='flex lg:justify-center items-center gap-4 lg:gap-2 '>
                   {/* icon */}
-                  <div className='text-xl'>
+                  <div className='text-2xl lg:text-xl text-red-600'>
                     <FaLink />
                   </div>
                   <div>
@@ -121,11 +121,11 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
 
               </div>
               {/* second row section for  */}
-              <div className='flex justify-between'>
+              <div className='flex justify-between gap-1 flex-col lg:flex-row'>
                 {/* left side bala div */}
-                <div className='flex items-center justify-center gap-3'>
+                <div className='flex items-center lg:justify-center gap-4 lg:gap-2'>
                   {/* icon */}
-                  <div className='text-xl'>
+                  <div className='text-2xl lg:text-xl text-red-600'>
                     <FaTwitter />
                   </div>
                   <div>
@@ -136,9 +136,9 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
                 </div>
                 {/* right section ke lie */}
 
-                <div className='flex gap-3 items-center '>
+                <div className='flex items-center gap-4 lg:gap-2 '>
                   {/* icon */}
-                  <div className='text-xl'>
+                  <div className='text-2xl lg:text-xl text-red-600'>
                     <HiOutlineOfficeBuilding />
                   </div>
                   <div>
