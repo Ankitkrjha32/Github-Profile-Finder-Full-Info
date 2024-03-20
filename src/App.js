@@ -103,29 +103,37 @@ function App() {
 
 
 
-  useEffect(() => {
-    clickHandler1()
-  }, [])
+  
 
 
-
-  const [mode, setMode] = useState('DARK')
+  const [mode, setMode] = useState('LIGHT')
 
 
   function modeSetter() {
     console.log('clicked')
+
+    setMode(mode=="DARK"?("LIGHT"):("DARK"))
+  
+  }
+
+  
+  useEffect(() => {
+    clickHandler1()
     if (mode == 'DARK') {
-      setMode('LIGHT')
+      // setMode('LIGHT')
+      document.documentElement.classList.remove("dark")
 
     }
 
     else if (mode == 'LIGHT') {
-      setMode('DARK')
+      // setMode('DARK')
+      document.documentElement.classList.add("dark")
 
 
 
     }
-  }
+  
+  }, [mode])
 
   
 
@@ -133,20 +141,20 @@ function App() {
     // background full width scrren size
     <div className=" 
     
-    bg-[#f6f8ff] w-[100vw] h-[100vh] flex items-center justify-center overflow-hidden
-    
+    bg-[#f6f8ff] w-[100vw] h-[100vh] flex items-center justify-center overflow-hidden 
+    dark:bg-[#141D2F]
     ">
       {/* contain full content of width 48 percent of total screen */}
       <div className=' w-[500px] lg:w-[700px] mx-auto flex flex-col  lg:mb-2 lg:mt-10  '>
         {/* hall div for title and dark light button */}
         <div className='flex  px-3 justify-between  items-center w-full   '>
           {/* title tag h3 */}
-          <h3 className=' font-[700] text-[30px] lg:text-[30px] font-mono   text-[#4b6a9b]  '> DevDetective</h3>
+          <h3 className=' font-[700] text-[30px] lg:text-[30px] font-mono   text-[#4b6a9b] dark:text-[#FFFFFF] '> DevDetective</h3>
           {/* div for light button  */}
           <div onClick={modeSetter} className='flex gap-x-2'>
-            <p className='font-mono  tracking-wider font-bold leading-6  lg:visible text-[#4b6a9b] '>{mode}</p>
+            <p className='font-mono  tracking-wider font-bold leading-6  lg:visible text-[#4b6a9b] dark:text-[#FFFFFF] '>{mode}</p>
             <div className='cursor-pointer'>
-              {mode == 'DARK' ? (<MdNightlight className='text-[22px] rounded-md ' />) : (<MdOutlineLightMode className='text-[22px] rounded-md ' />)
+              {mode == 'DARK' ? (<MdNightlight className='text-[22px] rounded-md ' />) : (<MdOutlineLightMode className='text-[22px] rounded-md dark: text-[#FFFFFF]' />)
               }
             </div>
           </div>

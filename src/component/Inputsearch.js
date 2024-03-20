@@ -27,7 +27,7 @@ if(e.key==='Enter'){
     <div className='mt-6  '>
 
 
-      <div className=' flex w-full   justify-between items-center h-[80px] bg-[#fefefe]  rounded-2xl '>
+      <div className=' flex w-full   justify-between items-center h-[80px] bg-[#fefefe] dark:bg-[#1E2A47] rounded-2xl '>
         <div className='flex  w-full items-center px-3'>
 
           <TfiSearch className='w-[30px] h-[25px] text-blue-500 ' />
@@ -36,7 +36,7 @@ if(e.key==='Enter'){
           <div className='  w-9/12 '>
             <label>
               <input type="text" onKeyDown={enterHandler} onChange={changeHandler} 
-                placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe]  text-[#627AA1] w-full   font-mono text-xl' />
+                placeholder='Enter a GitHub Username...' className=' px-5  outline-none  py-3  bg-[#fefefe]  dark:bg-[#1E2A47]  text-[#627AA1] dark:text-[#e8fff7] w-full   font-mono lg:text-xl ' />
             </label>
           </div>
         </div>
