@@ -49,11 +49,11 @@ const Cardprofile = ({ img, name, joined, url, id, bio, repos, followers, follow
             {/* div for name and joined date */}
             <div className='flex  flex-col lg:flex-row items-center justify-between '>
               <h3 className=' text-[23px] lg:text-[26px] font-bold  text-[#2b3442] dark:text-[#FFFFFF] name'>{name} </h3>
-              <p className='font-mono text-[#7f95b8] hidden  lg:visible'> {joined} </p>
+              <p className='font-mono text-[#7f95b8] hidden lg:block'> {joined} </p>
             </div>
             {/* div for id section */}
             <div className='flex justify-center lg:flex-col  lg:justify-start '>
-              <a href={url} target='blank' className='text-[#1c88ff] font-bold font-mono lowercase underline'>@{id}</a>
+              <a href={url} target='blank' className='text-[#1c88ff] font-bold font-mono lowercase underline'> @{id}</a>
 
             </div>
             {/* div for bio section */}

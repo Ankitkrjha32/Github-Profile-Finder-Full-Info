@@ -2,7 +2,8 @@ import './App.css';
 import Cardprofile from './component/Cardprofile';
 import Inputsearch from './component/Inputsearch';
 import { MdNightlight } from "react-icons/md";
-import { MdOutlineLightMode } from "react-icons/md";
+// import { MdOutlineLightMode } from "react-icons/md";
+import { BsSunFill } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -118,7 +119,7 @@ function App() {
 
   
   useEffect(() => {
-    clickHandler1()
+    
     if (mode == 'DARK') {
       // setMode('LIGHT')
       document.documentElement.classList.remove("dark")
@@ -135,7 +136,9 @@ function App() {
   
   }, [mode])
 
-  
+  useEffect(()=>{
+    clickHandler1()
+  },[])
 
   return (
     // background full width scrren size
@@ -154,7 +157,7 @@ function App() {
           <div onClick={modeSetter} className='flex gap-x-2'>
             <p className='font-mono  tracking-wider font-bold leading-6  lg:visible text-[#4b6a9b] dark:text-[#FFFFFF] '>{mode}</p>
             <div className='cursor-pointer'>
-              {mode == 'DARK' ? (<MdNightlight className='text-[22px] rounded-md ' />) : (<MdOutlineLightMode className='text-[22px] rounded-md dark: text-[#FFFFFF]' />)
+              {mode == 'DARK' ? (<MdNightlight className='text-[22px] rounded-md ' />) : (< BsSunFill className='text-[22px] rounded-md dark: text-[#FFFFFF]' />)
               }
             </div>
           </div>
